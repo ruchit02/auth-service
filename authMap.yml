@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: auth-env-vars
+    namespace: e7fd-exploring-openshift
+data:
+    AUTH_SERVICE_HOST: "10.102.182.67"
+    AUTH_SERVICE_PORT: "8080"
