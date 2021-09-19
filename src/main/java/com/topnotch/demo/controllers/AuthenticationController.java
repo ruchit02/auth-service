@@ -72,7 +72,7 @@ public class AuthenticationController {
 		bridge.send("detailsExchange-out-0", employee );
 		System.out.println("Photographer object sent to message broker ....");
 
-		return "redirect:" + TRANSFER_PROTOCOL + "://" + GATEWAY_HOST + ":" + GATEWAY_PORT + "/myapp/gateway/endpoint2";
+		return "redirect:" + TRANSFER_PROTOCOL + "://" + GATEWAY_HOST + "/myapp/gateway/endpoint2";
 	}
 
 	@GetMapping("/loginPage")
@@ -107,6 +107,6 @@ public class AuthenticationController {
 
 		response.addCookie(cookie);
 
-		return "redirect:" + TRANSFER_PROTOCOL + "://" + GATEWAY_HOST + ":" + GATEWAY_PORT + "/myapp/gateway/endpoint3";
+		return "redirect:" + TRANSFER_PROTOCOL + "://" + GATEWAY_HOST + "/myapp/gateway/endpoint3";
 	}
 }

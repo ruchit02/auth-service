@@ -59,8 +59,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		    .loginPage( "/myapp/authService/loginPage" ).permitAll()
 		    .loginProcessingUrl( "/myapp/authService/authenticate" )
 		    .defaultSuccessUrl( TRANSFER_PROTOCOL + 
-								"://" + GATEWAY_HOST + 
-								":" + GATEWAY_PORT + 
+								"://" + GATEWAY_HOST +
 								"/myapp/gateway/endpointToken", true)
 	    .and()
 	        .logout();
