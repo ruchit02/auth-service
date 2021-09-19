@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.topnotch.demo.dtos.EmployeeDetailsDTO;
 import com.topnotch.demo.dtos.LoginForm;
@@ -43,6 +44,13 @@ public class AuthenticationController {
 	
 	@Value("${com.topnotch.properties.gatewayservice.transferprotocol}")
 	private String TRANSFER_PROTOCOL;
+	
+	@GetMapping("/healthCheck")
+	@ResponseBody
+	public String checkLiveness(){
+		
+		return "App is doing fine!";
+	}
 
 	@GetMapping("/signupPage")
 	public String getSignUpForm(Model model) {

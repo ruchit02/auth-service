@@ -52,7 +52,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	public void configure(HttpSecurity http) throws Exception {
 		
 		http.csrf().disable()
-			.authorizeRequests().antMatchers( "/myapp/authService/signupPage" ).permitAll()			
+			.authorizeRequests().antMatchers( "/myapp/authService/signupPage", "/myapp/authService/healthCheck" ).permitAll()			
 			.anyRequest().authenticated() 
 	    .and()
 	        .formLogin()
